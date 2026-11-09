@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Retour — Le rappel qui fait revenir vos clients</title>
+<meta name="description" content="Vos clients ne partent pas déçus : ils oublient. Retour leur envoie un rappel au bon moment, avec une offre à usage unique. 29 €/mois, sans engagement.">
+<meta property="og:title" content="Retour — Le rappel qui fait revenir vos clients">
+<meta property="og:description" content="Un client satisfait ne revient pas parce qu’il oublie. Retour le relance pour vous. 29 €/mois, satisfait ou remboursé 30 jours.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F1E7; --surface:#FFFFFF; --ink:#1E1B16; --muted:#5E574B; --line:#DDD3BF;
+  --accent:#C8401F; --accent-ink:#FFFFFF; --soft:#EFE6D2;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#16130F; --surface:#211D17; --ink:#F3EDE0; --muted:#B5AC99; --line:#3A3328;
+    --accent:#E2573A; --accent-ink:#16130F; --soft:#2A251D;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#16130F; --surface:#211D17; --ink:#F3EDE0; --muted:#B5AC99; --line:#3A3328;
+  --accent:#E2573A; --accent-ink:#16130F; --soft:#2A251D;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:18px;line-height:1.55;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;line-height:1.1;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,9vw,3.8rem);font-weight:800}
+h2{font-size:clamp(1.7rem,6vw,2.4rem);font-weight:800}
+h3{font-size:1.25rem;font-weight:600}
+p{margin:0 0 1em}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px}
+section{padding:48px 0;border-top:1px solid var(--line)}
+header{padding:20px 0 0}
+.logo{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:1.4rem}
+.logo span{color:var(--accent)}
+.hero{padding:32px 0 48px;border:0}
+.kicker{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.85rem;font-weight:500;margin-bottom:20px}
+.lead{font-size:1.2rem;color:var(--muted)}
+.btn{display:block;width:100%;text-align:center;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;font-size:1.1rem;padding:18px 20px;border-radius:14px;min-height:56px;border:0;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+.fine{font-size:.9rem;color:var(--muted);margin-top:10px;text-align:center}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.ben{display:grid;gap:14px}
+.ben .card h3{margin-bottom:.3em}
+.ben .card p{margin:0;color:var(--muted)}
+.num{font-family:Fraunces,Georgia,serif;font-weight:800;color:var(--accent);font-size:1.1rem}
+.calc{background:var(--ink);color:var(--bg);border-radius:16px;padding:22px}
+.calc p{margin:0 0 .6em}
+.calc .big{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:2.4rem;line-height:1.1}
+.calc small{opacity:.75}
+.price{text-align:center}
+.price .amount{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:4rem;line-height:1}
+.price .amount span{font-size:1.2rem;font-weight:600}
+.guar{border:2px solid var(--accent);border-radius:16px;padding:20px;margin:22px 0}
+.guar h3{margin-bottom:.3em}
+.guar p{margin:0}
+ul.check{list-style:none;padding:0;margin:0 0 22px;text-align:left}
+ul.check li{padding:7px 0 7px 28px;position:relative}
+ul.check li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font-weight:700;cursor:pointer;list-style:none;padding-right:24px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:.7em 0 0;color:var(--muted)}
+footer{padding:32px 0 48px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+footer a{color:var(--muted)}
+.todo{background:var(--soft);padding:0 4px;border-radius:4px}
+#note{display:none;margin-top:12px;padding:12px;border-radius:10px;background:var(--soft);font-size:.95rem;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><div class="logo">Retour<span>.</span></div></header>
+
+  <section class="hero">
+    <div class="kicker">Pour les boutiques e-commerce de produits qui se rachètent</div>
+    <h1>Vos clients ne partent pas déçus. Ils oublient.</h1>
+    <p class="lead">Retour envoie à chaque client un rappel au bon moment, avec une offre à usage unique, pour qu’il recommande avant d’avoir tout fini.</p>
+    <a class="btn" href="#offre" data-go>Commencer</a>
+    <p class="fine">29&nbsp;€/mois · sans engagement · satisfait ou remboursé 30&nbsp;jours</p>
+  </section>
+
+  <section>
+    <h2>Un café, un soin, des croquettes : ça se rachète. Si on y pense.</h2>
+    <p>Un client satisfait a fini son produit. Il pense à le racheter… puis la vie reprend. Personne ne tient de fichier, personne ne relance. Chaque commande qui ne revient pas est du chiffre d’affaires perdu, sans que vous le voyiez.</p>
+    <div class="calc">
+      <p><small>Exemple chiffré (à adapter à votre boutique)</small></p>
+      <p>100 clients ont acheté un café à 14&nbsp;€. Si seulement 20 d’entre eux reviennent grâce au rappel&nbsp;:</p>
+      <p class="big">280&nbsp;€ de plus</p>
+      <p><small>soit presque 10 mois d’abonnement remboursés en un seul rappel.</small></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Trois choses, rien d’autre</h2>
+    <div class="ben">
+      <div class="card"><div class="num">1</div><h3>Un rappel automatique</h3><p>Il part à la fin du cycle naturel de votre produit : 4 semaines pour un café, 6 pour un soin visage. Vous choisissez le délai une fois.</p></div>
+      <div class="card"><div class="num">2</div><h3>Une offre de retour à usage unique</h3><p>Un code simple, valable une seule fois, qui pousse le client à passer commande maintenant.</p></div>
+      <div class="card"><div class="num">3</div><h3>Un compteur qui prouve</h3><p>Combien de clients sont revenus, combien de chiffre d’affaires vous leur devez. Vous voyez ce que vous payez.</p></div>
+    </div>
+  </section>
+
+  <section id="offre">
+    <div class="price">
+      <h2>Votre accès Retour</h2>
+      <div class="amount">29&nbsp;€<span> / mois</span></div>
+      <p class="lead">Soit moins d’1&nbsp;€ par jour. Un seul client ramené en rembourse un mois entier.</p>
+    </div>
+    <div class="guar">
+      <h3>Satisfait ou remboursé, 30 jours</h3>
+      <p>Si Retour ne vous convient pas, écrivez-nous dans les 30 jours suivant votre paiement à <span class="todo">[votre email de contact]</span>, sans justification. Remboursement intégral sous 5 jours ouvrés.</p>
+    </div>
+    <ul class="check">
+      <li>Accès anticipé : votre espace est mis en place avec vous sous 48&nbsp;h</li>
+      <li>Rappels par email, avec offre à usage unique</li>
+      <li>Compteur de clients revenus et de chiffre généré</li>
+    </ul>
+    <a class="btn" href="#" data-pay>Démarrer pour 29&nbsp;€/mois</a>
+    <p class="fine">Sans engagement, résiliable à tout moment.</p>
+    <div id="note">Le paiement s’ouvre très bientôt. Revenez dans un instant.</div>
+  </section>
+
+  <section>
+    <h2>Questions fréquentes</h2>
+    <details><summary>Est-ce que ça marche pour ma boutique&nbsp;?</summary><p>Si vous vendez des produits qui se consomment et se rachètent (café, thé, cosmétique, compléments, alimentation animale, hygiène), oui. Si vos clients n’achètent qu’une fois (meubles, électroménager), Retour n’est pas fait pour vous.</p></details>
+    <details><summary>Combien de temps ça me prend&nbsp;?</summary><p>Une quinzaine de minutes pour la mise en place, ensuite plus rien&nbsp;: les rappels partent seuls.</p></details>
+    <details><summary>Et si je veux arrêter&nbsp;?</summary><p>Vous résiliez quand vous voulez, sans préavis ni frais. Et pendant 30 jours, vous êtes remboursé sur simple demande.</p></details>
+    <details><summary>À quoi sert exactement ce que je paie&nbsp;?</summary><p>À l’envoi automatique des rappels à vos clients, à la gestion des offres à usage unique et au suivi du chiffre qu’ils vous rapportent.</p></details>
+  </section>
+
+  <footer>
+    <p><a href="#mentions">Mentions légales</a> · <a href="#mentions">CGV</a> · <a href="#mentions">Confidentialité</a></p>
+    <p id="mentions">Éditeur : <span class="todo">[raison sociale]</span> · SIRET <span class="todo">[SIRET]</span> · <span class="todo">[adresse]</span>. Pages complètes à venir.</p>
+  </footer>
+</div>
+<script>
+// Collez ici votre lien de paiement Stripe (commence par https://buy.stripe.com/)
+var STRIPE_LINK = "";
+document.querySelectorAll("[data-pay]").forEach(function(a){
+  if (STRIPE_LINK) { a.href = STRIPE_LINK; }
+  else { a.addEventListener("click", function(e){ e.preventDefault(); document.getElementById("note").style.display = "block"; }); }
+});
+</script>
+</body>
+</html>
